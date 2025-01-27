@@ -1,0 +1,215 @@
+#loading-dadpay {
+	position: fixed;
+	z-index: 1000;
+	width: 100%;
+	height: 100%;
+	right: 0;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	background-color: rgba(136, 190, 231, 0.75);
+	-webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+#loading-dadpay .icon {
+  font-size: 1rem;
+  position: absolute;
+  width: 21.5em;
+  height: 6.9em;
+  left: 50%;
+  top: 50%;
+  margin-top: -4em;
+  margin-left: -10em;
+  overflow: hidden;
+}
+#loading-dadpay .icon .text-content {
+  position: absolute;
+  width: 11em;
+  margin-top: 2.5em;
+  margin-left: 0.5em;
+}
+#loading-dadpay .icon .text-content .harf-content {
+  position: absolute;
+  width: 2em;
+  float: left;
+  height: 3.4em;
+  margin-right: 0.2em;
+  margin-left: -0.5em;
+  opacity: 0;
+}
+#loading-dadpay .icon .text-content .harf-content.d-one {
+  width: 3.35em;
+  animation-name: dadpay-ani-d-one;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+#loading-dadpay .icon .text-content .harf-content.d-three {
+  width: 3.35em;
+  left: 7.4em;
+  animation-name: dadpay-ani-d-three;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+#loading-dadpay .icon .text-content .harf-content.a-two {
+  width: 3.7em;
+  left: 3.5em;
+  animation-name: dadpay-ani-a-two;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+
+#loading-dadpay .icon .icon-content {
+  position: absolute;
+  width: 8.4em;
+  height: 6.4em;
+  right: 1em;
+  margin-top: 0.5em;
+  transform: rotate(0deg);
+  transform-origin: bottom left;
+  animation-timing-function: ease-in-out;
+  animation-name: dadpay-ani-icon-content;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+#loading-dadpay .icon .icon-content .head {
+  width: 7.2em;
+  height: 1em;
+  margin-top: 0.1em;
+  margin-left: 0.3em;
+  transform-origin: bottom left;
+  animation-timing-function: ease-in-out;
+  animation-name: dadpay-ani-icon-head;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+#loading-dadpay .icon .icon-content .main {
+  margin-top: 1.2em;
+  width: 8.4em;
+  height: 5.2em;
+}
+#loading-dadpay .icon .icon-content>div { position: absolute; }
+
+@keyframes dadpay-ani-d-one {
+	0% {
+		margin-left: -0.5em;
+		opacity: 0;
+	}
+	25% {
+		margin-left: -0.5em;
+		opacity: 0;
+	}
+	40% {
+		margin-left: 0;
+		opacity: 1;
+	}
+	65% {
+		margin-left: 0;
+		opacity: 1;
+	}
+	75% {
+		margin-left: -0.5em;
+		opacity: 0;
+	}
+	100% {
+		margin-left: -0.5em;
+		opacity: 0;
+	}
+}
+@keyframes dadpay-ani-a-two {
+	0% {
+		margin-left: -1em;
+		opacity: 0;
+	}
+	30% {
+		margin-left: -1em;
+		opacity: 0;
+	}
+	45% {
+		margin-left: 0;
+		opacity: 1;
+	}
+	60% {
+		margin-left: 0;
+		opacity: 1;
+	}
+	65% {
+		margin-left: -1em;
+		opacity: 0;
+	}
+	100% {
+		margin-left: -1em;
+		opacity: 0;
+	}
+}
+@keyframes dadpay-ani-d-three {
+	0% {
+		margin-left: -1.5em;
+		opacity: 0;
+	}
+	35% {
+		margin-left: -1.5em;
+		opacity: 0;
+	}
+	50% {
+		margin-left: 0;
+		opacity: 1;
+	}
+	55% {
+		margin-left: 0;
+		opacity: 1;
+	}
+	60% {
+		margin-left: -1.5em;
+		opacity: 0;
+	}
+	100% {
+		margin-left: -1.5em;
+		opacity: 0;
+	}
+}
+@keyframes dadpay-ani-icon-content {
+	0%   { transform: rotate( 90deg); }
+	20%  { transform: rotate(-10deg); }
+	25%  { transform: rotate(  0deg); }
+	75%  { transform: rotate(  0deg); }
+	80%  { transform: rotate(-10deg); }
+	100% { transform: rotate( 90deg); }
+}
+@keyframes dadpay-ani-icon-head {
+	0% {
+		top: 0.5em;
+		transform: rotate(20deg);
+	}
+	15% {
+		top: 0.5em;
+		transform: rotate(20deg);
+	}
+	40% {
+		top: 0;
+		transform: rotate(0deg);
+	}
+	60% {
+		top: 0;
+		transform: rotate(0deg);
+	}
+	75% {
+		top: 0.5em;
+		transform: rotate(20deg);
+	}
+	100% {
+		top: 0.5em;
+		transform: rotate(20deg);
+	}
+}
+
+/* Works on under the 768px  */
+@media (max-width: 767px) {
+	#loading-dadpay .icon { font-size: .5rem; }
+}
+
+/* Works on under the 576px  */
+@media (max-width: 575px) {
+	#loading-dadpay .icon { font-size: .4rem; }
+}
